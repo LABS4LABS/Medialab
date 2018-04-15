@@ -1,6 +1,30 @@
 body{
 	.navbar-fixed{
-		z-index: 1000;
+			z-index: 1003;
 	}
-	
+
+	.sidenav-trigger{
+		
+	}
+	.sidenav{
+		width: 400px;
+	}
+	.homebutton{
+		margin-left: 28px;
+	}
+	.add-btn{
+		background-color: white;
+		border: 1px solid #30b7a8;
+
+	}
+
+		
+	.add-icon:hover{
+		
+		color: white;
+
+	}
+	.add-icon{
+		color: #30b7a8;
+	}
 }

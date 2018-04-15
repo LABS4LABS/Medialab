@@ -1,4 +1,44 @@
 .navbar-fixed{
-		z-index: 1000;
+		z-index: 1003;
+}
+nav{
+	background-color: #30b7a8;
+}
+.sidenav-trigger{
+	z-index: 1001;
+	position: relative;
 }
 
+.sidenav{
+	width: 400px;
+	z-index: 1000;
+}
+.homebutton{
+	margin-left: 28px;
+}
+.add-btn{
+	background-color: white;
+	border: 1px solid #30b7a8;
+
+}
+
+	
+.add-btn:hover .add-icon{
+	
+	color: white;
+
+}
+.add-icon{
+	color: #30b7a8;
+}
+
+.chats{
+	margin-top: 50px;
+}
+.collection{
+	border: none;
+
+}
+.collection .collection-item{
+	border-bottom: 0px;
+}

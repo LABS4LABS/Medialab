@@ -21,6 +21,9 @@ nav{
 	border: 1px solid #30b7a8;
 
 }
+#slide-out{
+	width: 75%
+}
 
 	
 .add-btn:hover .add-icon{
@@ -46,4 +49,8 @@ nav{
 .add-chat{
 	margin-left: 20px;
 	margin-top: 25px;
+}
+.block{
+	border: 1px solid #30b7a8;
+	border-radius: 3px;
 }

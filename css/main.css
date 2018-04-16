@@ -42,3 +42,8 @@ nav{
 .collection .collection-item{
 	border-bottom: 0px;
 }
+
+.add-chat{
+	margin-left: 20px;
+	margin-top: 25px;
+}

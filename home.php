@@ -1,4 +1,32 @@
+  <?php
+ session_start();
+  $thread = $tag = "";
 
+  if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    if (empty($_POST["thread"])) {
+      $threadErr = "Name is required";
+    } else {
+      $_SESSION["thread"] = test_input($_POST["thread"]);
+    }
+
+    if (empty($_POST["tag"])) {
+      $tagErr = "tag is required";
+    } else {
+      $_SESSION["tag"] = test_input($_POST["tag"]);
+    }
+
+    $temparr = array($thread => $tag);
+    $store_data = array_merge($store_data, $temparr);
+  }
+
+
+
+  foreach ($thread as $key => $tag) {
+  echo $key;
+  echo $tag;
+  }
+
+  ?>
   <!DOCTYPE html>
   <html>
     <head>
@@ -17,7 +45,7 @@
     <body>
       <!-- Dropdown Structure -->
       <ul id="dropdown1" class="dropdown-content">
-        <li><a href="profile.html">Profile</a></li>
+        <li><a href="profile.php">Profile</a></li>
         <li><a href="#!">Settings</a></li>
         <li class="divider"></li>
         <li><a href="#!">Logout</a></li>
@@ -25,7 +53,7 @@
       <div class="navbar-fixed">
         <nav>
           <div class="nav-wrapper">
-            <a id="" href="index.html"><i class="material-icons left homebutton">home</i></a>
+            <a id="" href="index.php"><i class="material-icons left homebutton">home</i></a>
 
             <a href="#" class="brand-logo">Dashboard</a>
             <ul class="right hide-on-med-and-down">
@@ -42,8 +70,28 @@
         <div id="sidebar-row" class="row">
           <div id="sidebar1" class="col s8 offset-s2">
             <div class="row">
-    
-  </div>
+              <form class="col s12" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+      <div class="row">
+     
+      
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="thread" type="text" class="validate" value="<?php echo $thread;?>">
+          <label for="thread">Thread</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="tag" type="text" class="validate" value="<?php echo $tag;?>">
+          <label for="tag">Tag</label>
+        </div>
+      </div>
+      <button class="btn waves-effect waves-light" type="submit" name="action">Create
+    <i class="material-icons right">send</i>
+  </button>
+        
+    </form>
+            </div>
         
           </div>
           
@@ -63,16 +111,11 @@
        <li class="collection-header"><h4>Chats</h4></li> 
           <a class="add-chat btn-floating btn-small red"><i class="material-icons">add</i></a>
        <li class="collection-header"><h5>Threads</h5></li>    
-          <li class="collection-item avatar">
-        <i class="material-icons circle">people</i>
-        <span class="title">3D Printing</span>
-        <p>basic</p>
-        
-      </li>
+         
       <li class="collection-item avatar">
         <i class="material-icons circle">people</i>
-        <span class="title">3D Printing</span>
-        <p>Intermediate</p>
+        <span class="title">Problems with printing</span>
+        <p>3D Printer</p>
         
       </li>
       

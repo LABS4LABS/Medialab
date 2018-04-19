@@ -22,9 +22,11 @@ nav{
 
 }
 #slide-out{
-	width: 75%
+	width: 75%;
 }
-
+form{
+	margin-top: 150px;
+}
 	
 .add-btn:hover .add-icon{
 	
